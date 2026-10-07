@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class TablaMultiplicar {
+    public static void main(String[] args) {
+        // PASO 1: Preparar la herramienta para leer lo que el usuario escribe
+        Scanner scanner = new Scanner(System.in);
+
+        // PASO 2: Pedir el numero al usuario
+        System.out.print("Ingrese un numero para ver su tabla de multiplicar: ");
+        int numero = scanner.nextInt(); // Aqui se guarda el numero que el usuario escribió
+
+        // PASO 3: Imprimir un titulo para ayudar a la presentación
+        System.out.println("--- Tabla del " + numero + " ---");
+
+        // PASO 4: El bucle for para generar la tabla del 1 al 10
+        for (int i = 1; i <= 10; i++) {
+            // PASO 5: Calcular y mostrar el resultado en cada vuelta
+            int resultado = numero * i;
+            System.out.println(numero + " X " + i + " = " + resultado);
+        }
+
+        // Cerramos scanner para liberar memoria
+        scanner.close();
+    }
+}
